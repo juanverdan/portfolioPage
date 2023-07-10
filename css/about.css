@@ -1,0 +1,54 @@
+.image-text-section {
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  padding: 3rem 1.2rem 3rem 1.2rem;
+}
+
+.image-container img {
+  flex-basis: 50%;
+  padding-left: 10rem;
+  padding-right: 2rem;
+  width: 80%;
+}
+
+.text-container {
+  flex-basis: 50%;
+  padding: 0 3rem 0 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #202020;
+}
+
+.text-container i {
+  font-size: 2rem;
+  padding-right: 0.8rem;
+  gap: 1rem;
+}
+
+.text-container i:hover {
+  color: yellow;
+}
+
+.text-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 0.6rem;
+}
+
+@media screen and (max-width: 700px) {
+  .image-text-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container {
+    order: 1;
+  }
+
+  .text-container {
+    padding-top: 3rem;
+    order: 2;
+  }
+}

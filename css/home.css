@@ -1,0 +1,63 @@
+.container {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.container-title {
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  font-size: 64px;
+  color: #202020;
+}
+
+.container-subtitle {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #757575;
+}
+
+.container-button {
+  background-color: #e2ddda;
+  width: 120px;
+  height: 40px;
+  border: none;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  font-family: "Sarala", sans-serif;
+  font-size: 16px;
+  color: #2f2325;
+}
+
+.container-button:hover {
+  background-color: rgba(252, 252, 255, 0.724);
+}
+
+.container-image {
+  height: 300px;
+  padding-right: 30px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: block;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-items: column;
+    font-size: smaller;
+  }
+  .container-image {
+    display: none;
+  }
+}
