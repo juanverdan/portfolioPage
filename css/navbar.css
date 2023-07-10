@@ -54,6 +54,10 @@ body {
   left: 0;
 }
 
+.header i {
+  color: #202020;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
