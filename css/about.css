@@ -1,23 +1,23 @@
 .image-text-section {
   display: flex;
   align-items: center;
-  justify-content: center; /* CORRIGIDO: Valor 'center' para alinhar os itens no centro */
-  gap: 3rem; /* NOVO: Adiciona um espaçamento consistente entre a imagem e o texto */
-  padding: 3rem 2rem; /* AJUSTADO: Padding mais equilibrado para a seção inteira */
+  justify-content: center;
+  gap: 3rem;
+  padding: 3rem 2rem;
 }
 
 /* Estilos para o container da imagem */
 .image-container img {
-  flex-basis: 50%; /* Mantém a base de 50% do espaço */
-  width: 100%; /* Faz a imagem ocupar o espaço disponível em seu container */
-  max-width: 400px; /* Garante que a imagem não fique excessivamente grande em telas largas */
-  height: auto; /* Mantém a proporção da imagem */
+  flex-basis: 50%;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
 /* Estilos para o container do texto */
 .text-container {
-  flex-basis: 50%; /* Mantém a base de 50% do espaço */
-  max-width: 600px; /* Limita a largura do texto para uma leitura mais confortável */
+  flex-basis: 50%;
+  max-width: 600px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 0.95rem;
