@@ -3,6 +3,39 @@ main {
   padding-inline: 4rem;
 }
 
+/* --- ESTILOS PARA OS BOTÕES DE FILTRO --- */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0 4rem 0; /* Espaçamento acima e abaixo dos botões */
+}
+
+.filter-btn {
+  padding: 0.8rem 1.6rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 2rem; /* Deixa os botões arredondados */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Estilo do botão ATIVO (quando está selecionado) */
+.filter-btn.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+/* --- FIM DOS ESTILOS DE FILTRO --- */
+
 section.cards {
   margin: 4rem auto; /* Centraliza a seção */
   padding: 0 1rem;
@@ -57,7 +90,6 @@ section.cards {
   flex-grow: 1;
 }
 
-/* --- NOVA ESTRUTURA DO RODAPÉ DO CARD --- */
 .card-footer {
   display: flex;
   justify-content: space-between;
@@ -112,6 +144,7 @@ footer a:hover {
   color: #007bff;
 }
 
+/* --- MÍDIA QUERIES --- */
 @media (max-width: 1024px) {
   :root {
     font-size: 50%;

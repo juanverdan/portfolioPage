@@ -69,8 +69,14 @@
     </header>
 
     <main>
+      <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="javascript">JavaScript</button>
+      </div>
+
       <section class="cards">
-        <div class="card">
+        <div class="card" data-category="python">
           <a href="https://github.com/juanverdan/telegram_bot" target="_blank">
             <img
               src="../assets/telegram_bot.jpg"
@@ -99,7 +105,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-category="javascript">
           <a href="https://juanverdan.github.io/exceel/" target="_blank">
             <img
               src="../assets/exceed.jpg"
@@ -115,7 +121,7 @@
           </div>
           <div class="card-footer">
             <a
-              href="https://github.com/jaunverdan/exceel"
+              href="https://github.com/juanverdan/exceel"
               target="_blank"
               class="repo-link"
             >
@@ -130,7 +136,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-category="javascript">
           <a href="https://juanverdan.github.io/linktree/" target="_blank">
             <img
               src="../assets/linkedtree.jpg"
@@ -189,6 +195,6 @@
       ></a>
     </footer>
 
-    <script type="text/javascript" src="../js/home.js"></script>
+    <script type="text/javascript" src="../js/projects.js"></script>
   </body>
 </html>
