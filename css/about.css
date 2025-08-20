@@ -1,24 +1,33 @@
 .image-text-section {
   display: flex;
-  justify-content: flex;
   align-items: center;
-  padding: 3rem 1.2rem 3rem 1.2rem;
+  justify-content: center; /* CORRIGIDO: Valor 'center' para alinhar os itens no centro */
+  gap: 3rem; /* NOVO: Adiciona um espaçamento consistente entre a imagem e o texto */
+  padding: 3rem 2rem; /* AJUSTADO: Padding mais equilibrado para a seção inteira */
 }
 
+/* Estilos para o container da imagem */
 .image-container img {
-  flex-basis: 50%;
-  padding-left: 10rem;
-  padding-right: 2rem;
-  width: 80%;
+  flex-basis: 50%; /* Mantém a base de 50% do espaço */
+  width: 100%; /* Faz a imagem ocupar o espaço disponível em seu container */
+  max-width: 400px; /* Garante que a imagem não fique excessivamente grande em telas largas */
+  height: auto; /* Mantém a proporção da imagem */
 }
 
+/* Estilos para o container do texto */
 .text-container {
-  flex-basis: 50%;
-  padding: 0 3rem 0 0;
+  flex-basis: 50%; /* Mantém a base de 50% do espaço */
+  max-width: 600px; /* Limita a largura do texto para uma leitura mais confortável */
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #202020;
+}
+
+.text-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 0.6rem;
 }
 
 .text-container i {
@@ -28,27 +37,49 @@
 }
 
 .text-container i:hover {
-  color: yellow;
+  color: #007bff;
 }
 
-.text-container h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  padding-bottom: 0.6rem;
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
 }
 
+.timeline li {
+  margin-bottom: 1rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.timeline li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+  font-size: 1.2rem;
+}
+
+.timeline span {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Media Query para responsividade em telas menores */
 @media screen and (max-width: 700px) {
   .image-text-section {
-    flex-direction: column;
+    flex-direction: column; /* Empilha a imagem e o texto verticalmente */
     text-align: center;
+    padding: 3rem 1rem; /* Padding reduzido para telas pequenas */
   }
 
   .image-container {
-    order: 1;
+    order: 1; /* Garante que a imagem venha primeiro */
+    margin-bottom: 2rem; /* Adiciona um espaço abaixo da imagem */
   }
 
   .text-container {
-    padding-top: 3rem;
-    order: 2;
+    order: 2; /* Garante que o texto venha depois */
+    padding-top: 0; /* Remove padding desnecessário */
   }
 }
