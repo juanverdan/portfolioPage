@@ -3,23 +3,24 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="O site autoexplicativo de Juan Verdan" />
+    <meta
+      name="description"
+      content="Juan Verdan — DevOps Engineer. Automação, cloud e os projetos que venho construindo."
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Juan Verdan</title>
     <link rel="stylesheet" href="./css/all.css" />
@@ -27,31 +28,45 @@
   </head>
   <body>
     <header class="header">
-      <img
-        class="logo"
-        src="./assets/logo2.svg"
-        alt="Logo do Ti. site do Juan"
-      />
+      <div class="winbar">
+        <span class="dots">
+          <span class="dot dot-a"></span>
+          <span class="dot dot-b"></span>
+          <span class="dot dot-c"></span>
+        </span>
+        <span class="winbar-path">guest@juanverdan:~$</span>
+      </div>
       <nav class="navbar">
+        <img
+          class="logo"
+          src="./assets/logo2.svg"
+          alt="Logo do site de Juan Verdan"
+        />
         <ul class="nav-menu">
           <li class="nav-item">
-            <a href="./index.html" class="nav-link">Home</a>
+            <a href="#home" class="nav-link active">./home</a>
           </li>
           <li class="nav-item">
-            <a href="./pages/about.html" class="nav-link">Sobre</a>
+            <a href="#sobre" class="nav-link">./sobre</a>
           </li>
           <li class="nav-item">
-            <a href="./pages/projects.html" class="nav-link">Projetos</a>
+            <a href="#fluxo" class="nav-link">./fluxo</a>
           </li>
           <li class="nav-item">
+            <a href="#projetos" class="nav-link">./projetos</a>
+          </li>
+          <li class="nav-item nav-social">
             <a
-              href="https://www.linkedin.com/in/juan-verdan-dos-santos/"
+              href="https://www.linkedin.com/in/juanverdan/"
               target="_blank"
+              aria-label="LinkedIn de Juan Verdan"
               ><i class="fa-brands fa-linkedin"></i
             ></a>
-            <a href="https://github.com/TioIndiano" target="_blank"
+            <a
+              href="https://github.com/juanverdan"
+              target="_blank"
+              aria-label="GitHub de Juan Verdan"
               ><i class="fa-brands fa-github"></i
-            ></i
             ></a>
           </li>
         </ul>
@@ -59,38 +74,285 @@
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
         </div>
       </nav>
     </header>
 
-    <main class="container">
-      <div class="container-body">
-        <h1 class="container-title">Fala aí!</h1>
-        <h2 class="container-subtitle">
-          Me chamo <b>Juan Verdan!</b> Sou um DevOps Engineer!
-        </h2>
+    <main class="session">
+      <div class="session-body">
+        <section id="home" class="session-block">
+          <span class="hero-mark" aria-hidden="true">DEVOPS</span>
+          <div class="hero-content">
+            <p class="line">
+              <span class="prompt">guest@juanverdan</span><span class="path"
+                >:~</span
+              ><span class="dollar">$</span> whoami
+            </p>
+            <p class="output">
+              &gt; <span class="highlight">Juan Verdan</span> — DevOps
+              Engineer
+            </p>
+            <p class="line">
+              <span class="prompt">guest@juanverdan</span><span class="path"
+                >:~</span
+              ><span class="dollar">$</span> cat skills.txt<span
+                class="cursor"
+              ></span>
+            </p>
+            <ul class="tags">
+              <li>python</li>
+              <li>powershell</li>
+              <li>docker</li>
+              <li>ci/cd</li>
+              <li>cloud</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="sobre" class="session-block">
+          <h2>sobre mim</h2>
+          <p>
+            Sou um profissional DevOps com uma jornada que começou no
+            desenvolvimento Frontend e evoluiu para uma paixão por automação
+            e infraestrutura.
+          </p>
+          <p>
+            Atualmente, como Analista DevOps Jr., sou responsável por
+            garantir a eficiência e a alta disponibilidade de ambientes
+            críticos. Utilizo <strong>Python</strong> e
+            <strong>PowerShell</strong> para criar automações que otimizam
+            desde backups e deploys até a renovação de certificados HTTPS.
+            Tenho experiência sólida na gestão de ambientes virtualizados com
+            <strong>Hyper-V</strong> e na implementação de políticas de
+            segurança em firewalls <strong>Fortinet</strong>.
+          </p>
+          <p>
+            Meu objetivo é continuar a desenvolver soluções robustas e
+            seguras, explorando tecnologias de <strong>Cloud</strong>
+            (possuo certificações OCI e Google Cloud) e aprimorando minhas
+            habilidades em <strong>Docker</strong> e esteiras de
+            <strong>CI/CD</strong>.
+          </p>
+          <ul class="tags">
+            <li><i class="fa-brands fa-python"></i>python</li>
+            <li><i class="fa-solid fa-terminal"></i>powershell</li>
+            <li><i class="fa-brands fa-docker"></i>docker</li>
+            <li><i class="fa-solid fa-cloud"></i>cloud</li>
+          </ul>
+        </section>
+
+        <section id="fluxo" class="session-block">
+          <p class="eyebrow">fluxo de trabalho</p>
+          <h2>Como eu trabalho</h2>
+          <p>
+            Do diagnóstico ao deploy — como eu estruturo automação e
+            infraestrutura do início ao fim.
+          </p>
+          <div class="process-list">
+            <div class="process-step">
+              <span class="process-number">01</span>
+              <div>
+                <h3>Diagnóstico</h3>
+                <p>
+                  Mapeio o ambiente, os gaps e os requisitos antes de
+                  escrever a primeira linha de automação.
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <span class="process-number">02</span>
+              <div>
+                <h3>Automação</h3>
+                <p>
+                  Escrevo scripts e esteiras (Python, PowerShell, CI/CD) que
+                  eliminam trabalho manual repetitivo.
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <span class="process-number">03</span>
+              <div>
+                <h3>Validação &amp; Deploy</h3>
+                <p>
+                  Testo, monitoro e coloco em produção com rollback e
+                  segurança garantidos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projetos" class="session-block">
+          <p class="line section-intro">
+            <span class="prompt">guest@juanverdan</span><span class="path"
+              >:~</span
+            ><span class="dollar">$</span> ls ./projetos<span
+              class="cursor"
+            ></span>
+          </p>
+
+          <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">all</button>
+          <button class="filter-btn" data-filter="python">python</button>
+          <button class="filter-btn" data-filter="javascript">
+            javascript
+          </button>
+        </div>
+
+        <section class="cards">
+          <div class="card" data-category="python">
+            <a
+              href="https://github.com/juanverdan/telegram_bot"
+              target="_blank"
+            >
+              <img
+                src="./assets/telegram_bot.jpg"
+                alt="Imagem do projeto Bot no Telegram"
+              />
+            </a>
+            <div class="content">
+              <h3>Bot no Telegram para Servidores</h3>
+              <p>
+                Projeto em Python que utiliza WinRM para executar comandos em
+                VMs Windows remotamente via Telegram.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a
+                href="https://github.com/juanverdan/telegram_bot"
+                target="_blank"
+                class="repo-link"
+              >
+                <i class="fa-brands fa-github"></i>
+                <span>Ver Código</span>
+              </a>
+              <div class="tech-stack">
+                <i class="fa-brands fa-python" title="Python"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-category="python">
+            <a
+              href="https://github.com/juanverdan/elo-league-manager"
+              target="_blank"
+            >
+              <img
+                src="./assets/elosystem.jpg"
+                alt="Imagem do projeto Elo System"
+              />
+            </a>
+            <div class="content">
+              <h3>Elo System Ranking</h3>
+              <p>
+                Uma plataforma avançada de gerenciamento de ligas construída
+                com Python/Flask. Apresenta um sistema Elo híbrido, perfis de
+                jogador com gráficos de desempenho, uma loteria de draft no
+                estilo NBA e geração automatizada de jornais em PDF.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a
+                href="https://github.com/juanverdan/elo-league-manager"
+                target="_blank"
+                class="repo-link"
+              >
+                <i class="fa-brands fa-github"></i>
+                <span>Ver Código</span>
+              </a>
+              <div class="tech-stack">
+                <i class="fa-brands fa-python" title="Python"></i>
+                <i class="fa-brands fa-js-square" title="JavaScript"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-category="javascript">
+            <a href="https://juanverdan.github.io/exceel/" target="_blank">
+              <img
+                src="./assets/exceed.jpg"
+                alt="Imagem de um projeto de hábitos"
+              />
+            </a>
+            <div class="content">
+              <h3>Exceed: Acompanhador de Hábitos</h3>
+              <p>
+                Um projeto feito para desenvolvimento e acompanhamento de
+                novos hábitos saudáveis.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a
+                href="https://github.com/juanverdan/exceel"
+                target="_blank"
+                class="repo-link"
+              >
+                <i class="fa-brands fa-github"></i>
+                <span>Ver Código</span>
+              </a>
+              <div class="tech-stack">
+                <i class="fa-brands fa-js-square" title="JavaScript"></i>
+                <i class="fa-brands fa-html5" title="HTML5"></i>
+                <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-category="javascript">
+            <a href="https://juanverdan.github.io/linktree/" target="_blank">
+              <img
+                src="./assets/linkedtree.jpg"
+                alt="Imagem de um agregador de links"
+              />
+            </a>
+            <div class="content">
+              <h3>Linktree: Agregador de links</h3>
+              <p>
+                Aplicação para agrupar todos os seus links em um só lugar,
+                para pessoas ou empresas.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a
+                href="https://github.com/juanverdan/linktree"
+                target="_blank"
+                class="repo-link"
+              >
+                <i class="fa-brands fa-github"></i>
+                <span>Ver Código</span>
+              </a>
+              <div class="tech-stack">
+                <i class="fa-brands fa-js-square" title="JavaScript"></i>
+                <i class="fa-brands fa-html5" title="HTML5"></i>
+                <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+        </section>
       </div>
-      <img
-        class="container-image"
-        src="./assets/vector.svg"
-        alt="Uma pessoa programando!"
-      />
     </main>
+
     <footer>
-      <a
-        href="https://www.linkedin.com/in/juan-verdan-dos-santos/"
-        target="_blank"
-        ><i class="fa-brands fa-linkedin"></i
-            ></a>
-      <a href="https://github.com/TioIndiano" target="_blank"
-        ><i class="fa-brands fa-square-github"></i></a>
-      <a href="https://www.behance.net/indiano_verdan" target="_blank"
-        ><i class="fa-brands fa-square-behance"></i></a>
-      <a href="https://www.instagram.com/juan_vrdn/" target="_blank"
-        ><i class="fa-brands fa-square-instagram"></i></a>
+      <div class="status">
+        <span class="status-dot"></span>
+        <span class="status-text">status: online</span>
+      </div>
+      <div class="socials">
+        <a
+          href="https://www.linkedin.com/in/juanverdan/"
+          target="_blank"
+          aria-label="LinkedIn"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a
+          href="https://github.com/juanverdan"
+          target="_blank"
+          aria-label="GitHub"
+          ><i class="fa-brands fa-square-github"></i
+        ></a>
+      </div>
     </footer>
-    <script type="text/javascript" src="./home.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
